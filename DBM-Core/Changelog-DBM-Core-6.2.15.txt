@@ -1,0 +1,62 @@
+tag 6.2.15
+abc10a2251349aed0dabcce5aea0952b8db424c2
+subversion <svn@deadlybossmods.com>
+2015-11-24 23:39:15 +0100
+
+Tagging as 6.2.15
+
+
+--------------------
+
+subversion:
+	- increment version number to 6.2.15
+	- Omega via svn r14672: Add some doomfire stack stuff
+	- Omega via svn r14671: CN update Disabled alternate lines on archimonde. they don?\226?\128?\153t really work right. Fixed missing voice for desecrate Fix a bug where deathbrand countdown would not cancel or cause double countdowns.
+	- Omega via svn r14670: More minor tweaks
+	- Omega via svn r14669: Another tweak
+	- Omega via svn r14668: Extend lines by default More tweaks to desecrate/allure interaction with smart timer code
+	- Omega via svn r14667: Push another minor tweak
+	- Omega via svn r14666: Fixes
+	- ultrashining via svn r14665: zhTW update
+	- Omega via svn r14664: Strip server names from hud labels
+	- oscarucb via svn r14663: fix timer for Kormrok's second explosive rune
+	- Omega via svn r14662: another tweak
+	- Omega via svn r14661: Another very minor tweak
+	- Omega via svn r14660: Fixed a bug where timers would extend for all desecrates instead of just the first one that actually triggers it Fixed a bug where tank shadow timer was about 2.4sec too slow.
+	- Omega via svn r14659: Trust debuff order since sometimes debuff time is actually wrong and returns 4, 6, 8, 10 instead of 5, 7, 9, 11
+	- Omega via svn r14658: Tweak
+	- Omega via svn r14657: Add dot to locals
+	- Omega via svn r14656: Fix typo
+	- Omega via svn r14655: BW rev
+	- Omega via svn r14654: Fix last fix, adjusted wrong one Added GTFO for pillar aoe Add icon position to yell for wrath of guldan
+	- Omega via svn r14653: Another tweak
+	- Omega via svn r14652: Actually that won?\226?\128?\153t fix the cause of that, this will
+	- Omega via svn r14651: Fix lua error with zakuun and voice filters
+	- Omega via svn r14650: Add hud slash option to do a party dot only, without arrow
+	- Omega via svn r14649: Force reset icon setting on archimonde marks.
+	- Omega via svn r14648: Remove some debug
+	- Omega via svn r14647: Fix bug
+	- Omega via svn r14646: Change CM code to work better maybe
+	- Omega via svn r14645: Fix error
+	- Omega via svn r14644: Try some more
+	- Omega via svn r14643: tweak inline icons
+	- Omega via svn r14642: Try this tweak
+	- Omega via svn r14641: tweak
+	- Omega via svn r14640: Add the non english backup for last
+	- Omega via svn r14639: Fix annihilon bug
+	- Omega via svn r14638: Smarten up mannoroth code even more to cancel adds timers on phase changes that are > time remaining until the adds timers reset by next Summon Adds script.
+	- Omega via svn r14637: Small tweak
+	- Omega via svn r14636: Tweak
+	- Omega via svn r14635: Add debug
+	- Omega via svn r14634: Option text tweaks
+	- Omega via svn r14633: Throttle
+	- Omega via svn r14632: And this spot
+	- Omega via svn r14631: Couple more key spots
+	- Omega via svn r14630: use	FlashClientIcon(), because all the cool kids are these days.
+	- Omega via svn r14629: Revert player regen check back to dbm scheduler. Player regen combat detection hasn?\226?\128?\153t worked reliably enough without the redundancy
+	- Omega via svn r14628: tweaks to headless horseman
+	- Omega via svn r14627: Fix lua error in getDistanceBetween
+	- Omega via svn r14626: More attempts to unfuck xhul swapping.
+	- Omega via svn r14625: More fine tuning
+	- Omega via svn r14624: If users voice preferences are hosed, use defaults
+	- tandanu via svn r14623: increment alpha version

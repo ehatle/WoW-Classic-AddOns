@@ -1,0 +1,25 @@
+------------------------------------------------------------------------
+r11365 | rabbit | 2006-09-19 06:41:19 -0700 (Tue, 19 Sep 2006) | 1 line
+
+BigWigs_RazuviousAssistant: D'oh, fix boss dead detection.
+------------------------------------------------------------------------
+r10676 | rabbit | 2006-09-09 14:05:00 -0700 (Sat, 09 Sep 2006) | 1 line
+
+BigWigs_RazuviousAssistant: Work around the icon thing for now, we need some CandyBar changes for it to work, I think.
+------------------------------------------------------------------------
+r10539 | rabbit | 2006-09-08 14:00:31 -0700 (Fri, 08 Sep 2006) | 1 line
+
+BigWigs_RazuviousAssistant: Make sure to disable the mod when Raz dies.
+------------------------------------------------------------------------
+r9943 | rabbit | 2006-09-03 08:25:15 -0700 (Sun, 03 Sep 2006) | 1 line
+
+BigWigs_RazuviousAssistant: Forgot to load the libs in the TOC.
+------------------------------------------------------------------------
+r9941 | rabbit | 2006-09-03 08:21:05 -0700 (Sun, 03 Sep 2006) | 1 line
+
+BigWigs_RazuviousAssistant: Rewrite with SEEmbedAura. Shows timer bars for Mind Exhaustion and Taunt.
+------------------------------------------------------------------------
+r6956 | shyva | 2006-08-05 04:55:25 -0700 (Sat, 05 Aug 2006) | 1 line
+
+BigWigs_RazuviousAssistant - Initial commit.
+------------------------------------------------------------------------

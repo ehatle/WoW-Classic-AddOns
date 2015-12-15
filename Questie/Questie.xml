@@ -1,0 +1,71 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+..\FrameXML\UI.xsd">
+<script file="Config.lua" />
+<script file="PrettyFrames.lua"/>
+<script file="Interface\AddOns\Questie\extern\DevToolsDump.lua"/>
+<script file="Interface\AddOns\Questie\Database\items.lua"/>
+<script file="Interface\AddOns\Questie\Database\monsters.lua"/>
+<script file="Interface\AddOns\Questie\Database\events.lua"/>
+<script file="Interface\AddOns\Questie\Database\zone.lua"/>
+<script file="Interface\AddOns\Questie\Database\hash.lua"/>
+<script file="Interface\AddOns\Questie\Database\finishers.lua"/>
+<script file="Interface\AddOns\Questie\Database\objects.lua"/>
+<script file="Interface\AddOns\Questie\Database\addendum.lua"/>
+<script file="Interface\AddOns\Questie\astrolabe\Astrolabe.lua"/>
+<script file="QuestieAstro.lua"/>
+<script file="QuestieNotes.lua" />
+<script file="QuestieQuest.lua" />
+<script file="QuestieTracker.lua"/>
+<script file="QuestieArrow.lua"/>
+
+
+<Button name="Questie_Toggle" parent="WorldMapFrame" inherits="UIPanelButtonTemplate" text="Toggle Questie">
+	<Size>
+		<AbsDimension x="120" y="20"/>
+	</Size>
+	<Anchors>
+		<Anchor relativePoint="TOP" point="CENTER">
+			<Offset>
+				<AbsDimension x="120" y="-12"/>
+			</Offset>
+		</Anchor>
+	</Anchors>
+	<Scripts>
+		<OnLoad>
+			this:SetFrameLevel(10);
+		</OnLoad>
+		<OnClick>
+			Questie:Toggle();
+		</OnClick>
+	</Scripts>
+</Button>
+
+<Frame name="QuestieUpdates" parent="WorldMapFrame" hidden="false">
+	<Scripts>
+		<OnUpdate>
+			Questie:OnUpdate(arg1)
+		</OnUpdate>
+	</Scripts>
+</Frame>
+
+<Frame name="Questie" parent="UIParent" hidden="false" inherits="ActionButtonTemplate">
+	<Scripts>
+		<OnUpdate>
+			Questie:OnUpdate(arg1)
+		</OnUpdate>
+		<OnEvent>
+			Questie:OnEvent(this, event, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
+		</OnEvent>
+		<OnLoad>
+			Questie:OnLoad()
+		</OnLoad>
+	</Scripts>
+</Frame>
+<GameTooltip name="QuestieTooltip" frameStrata="TOOLTIP" hidden="true" inherits="GameTooltipTemplate">
+		<Scripts>
+			<OnLoad>
+				this:SetOwner(UIParent,"ANCHOR_NONE")
+			</OnLoad>
+		</Scripts> 
+</GameTooltip>
+</Ui>
