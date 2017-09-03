@@ -1,0 +1,7 @@
+## Interface: 11200
+## Title: No Join Leave Spam
+## Author: jsb
+## Original Author: bonho
+## Version: 1.1
+## SavedVariables: NoJoinLeaveSpam_MutedChannels
+NoJoinLeaveSpam.lua

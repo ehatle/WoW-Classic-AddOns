@@ -1,0 +1,10 @@
+## Interface: 10900
+## Title: RangeColor
+## Notes: Change the icon color when out of range, no mana, etc. Use << /rc >> or << /rangecolor >> for the options menu.
+## Author: Edswor
+## OptionalDeps: myAddOns
+## Dependencies:
+## SavedVariablesPerCharacter: RangeColor_Save2
+RangeColor.xml
+RangeColorOptions.xml
+

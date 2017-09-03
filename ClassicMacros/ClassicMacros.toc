@@ -1,0 +1,6 @@
+## Interface: 11200
+## Title: ClassicMacros
+## Notes: Bringing retail macro commands to classic WoW.
+## Author: Avi
+
+ClassicMacros.lua
