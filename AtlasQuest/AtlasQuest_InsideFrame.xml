@@ -1,16 +1,49 @@
+<!--
+
+	AtlasQuest, a World of Warcraft addon.
+	Email me at mystery8@gmail.com
+
+	This file is part of AtlasQuest.
+
+	AtlasQuest is free software; you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation; either version 2 of the License, or
+	(at your option) any later version.
+
+	AtlasQuest is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with AtlasQuest; if not, write to the Free Software
+	Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+
+-->
+
+
 <Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/ C:\Projects\WoW\Bin\Interface\FrameXML\UI.xsd">
 ------------------ FRAME INSIDE ATLAS
 
+<!--  Fonts -->
+<!-- Cause Problems with the CN font i will use blizzard default font to prevent problems! -->
+<!-- Blizz Fonts (Height): -->
 
---Fonts
-<FontString name="AQFont" inherits="MasterFont" font="Fonts\FRIZQT__.TTF" virtual="true">
+<!-- GameFontNormalSmall (10)  .. use instead of AQFontVERYSmall but it is smaller -->
+<!-- SystemFont (15)  .. use for AQFontBIG -->
+<!-- QuestFont (13)  .. use for AQFont -->
+<!-- GameFontNormalLarge (16) .. perhaps useful -->
+<!-- QuestFontHighlight (14)  .. perhaps useful -->
+
+<!--
+<FontString name="QuestFont" inherits="MasterFont" font="Fonts\FRIZQT__.TTF" virtual="true">
   <FontHeight>
     <AbsValue val="13"/>
   </FontHeight>
     <Color r="1.0" g="0.82" b="0"/>
 </FontString>
 
-<FontString name="AQFontBIG" inherits="MasterFont" font="Fonts\FRIZQT__.TTF" virtual="true">
+<FontString name="SystemFont" inherits="MasterFont" font="Fonts\FRIZQT__.TTF" virtual="true">
   <FontHeight>
     <AbsValue val="15"/>
   </FontHeight>
@@ -24,6 +57,10 @@
     <Color r="1.0" g="0.82" b="0"/>
 </FontString>
 
+These fonts are useless atm -->
+
+
+<!--  AtlasQuest Inside Atlas/AlphaMap frame -->
 <Frame name="AtlasQuestInsideFrame" toplevel="true" enableMouse="true" parent="AtlasFrame" hidden="false">
    <Size>
       <AbsDimension x="510" y="510"/>
@@ -37,7 +74,6 @@
    </Anchors>
      <Frames>
 -----------------------------------------FRAME 1  --------------------------------------------------------------
-----------------------------------------------------------------------------------------------------------------
         <Button name="AtlasQuestItemframe1" virtual="true" hidden="false">
           <Size>
             <AbsDimension x="236" y="30"/>
@@ -102,7 +138,6 @@
            </Scripts>
         </Button>
 ----------------------------------------- FRAME 2  --------------------------------------------------------------
-----------------------------------------------------------------------------------------------------------------
         <Button name="AtlasQuestItemframe2" virtual="true" hidden="false">
           <Size>
             <AbsDimension x="236" y="30"/>
@@ -167,7 +202,6 @@
            </Scripts>
         </Button>
 ----------------------------------------- FRAME 3  --------------------------------------------------------------
-----------------------------------------------------------------------------------------------------------------
         <Button name="AtlasQuestItemframe3" virtual="true" hidden="false">
           <Size>
             <AbsDimension x="236" y="30"/>
@@ -231,8 +265,7 @@
 	          </OnShow>
            </Scripts>
         </Button>
------------------------------------------ FRAME 4  --------------------------------------------------------------
-----------------------------------------------------------------------------------------------------------------
+---------------------------------------- FRAME 4  --------------------------------------------------------------
         <Button name="AtlasQuestItemframe4" virtual="true" hidden="false">
           <Size>
             <AbsDimension x="236" y="30"/>
@@ -297,7 +330,6 @@
            </Scripts>
         </Button>
 ----------------------------------------- FRAME 5  --------------------------------------------------------------
-----------------------------------------------------------------------------------------------------------------
         <Button name="AtlasQuestItemframe5" virtual="true" hidden="false">
           <Size>
             <AbsDimension x="236" y="30"/>
@@ -362,7 +394,6 @@
            </Scripts>
         </Button>
 ----------------------------------------- FRAME 6  --------------------------------------------------------------
-----------------------------------------------------------------------------------------------------------------
         <Button name="AtlasQuestItemframe6" virtual="true" hidden="false">
           <Size>
             <AbsDimension x="236" y="30"/>
@@ -427,7 +458,6 @@
            </Scripts>
         </Button>
 --------------------------------------------FRAME ENDE-----------------------------------------------------------
-----------------------------------------------------------------------------------------------------------------
 		<Button name="CLOSEbutton2" inherits="UIPanelCloseButton" text="X">
           <Size>
             <AbsDimension x="30" y="30"/>
@@ -448,6 +478,69 @@
 		    </OnShow>
 	      </Scripts>
         </Button>
+        <CheckButton name="AQFinishedQuest" inherits="OptionsCheckButtonTemplate" checked="false">
+         <Size>
+          <AbsDimension x="25" y="25"/>
+         </Size>
+	     <Anchors>
+		  <Anchor point="TOPRIGHT">
+			  <Offset>
+			    	<AbsDimension x="-20" y="-45"/>
+			  </Offset>
+		  </Anchor>
+	     </Anchors>
+	     <HitRectInsets>
+           <AbsInset left="0" right="0" top="0" bottom="0"/>
+         </HitRectInsets>
+	     <Scripts>
+		   <OnClick> AQFinishedQuest_OnClick(); </OnClick>
+		   <OnShow>
+	         this:SetFrameLevel( this:GetParent():GetFrameLevel() + 2 );
+	       </OnShow>
+	     </Scripts>
+        </CheckButton>
+        <Button name="AQNextPageButton_Right" inherits="" hidden="true">
+          <Size>
+            <AbsDimension x="40" y="40"/>
+          </Size>
+	      <Anchors>
+		    <Anchor point="BOTTOM">
+			  <Offset>
+			    <AbsDimension x="45" y="10"/>
+			  </Offset>
+		    </Anchor>
+	      </Anchors>
+	     <NormalTexture file="Interface\Glues\Common\Glue-RightArrow-Button-Up"/>
+		 <PushedTexture file="Interface\Glues\Common\Glue-RightArrow-Button-Down"/>
+		 <HighlightTexture file="Interface\Glues\Common\Glue-RightArrow-Button-Highlight" alphaMode="ADD"/>
+	      <Scripts>
+		    <OnClick> AQNextPageR_OnClick(); </OnClick>
+		    <OnShow>
+	          this:SetFrameLevel( this:GetParent():GetFrameLevel() + 2 );
+	        </OnShow>
+	      </Scripts>
+        </Button>
+        <Button name="AQNextPageButton_Left" inherits="" hidden="true">
+          <Size>
+            <AbsDimension x="40" y="40"/>
+          </Size>
+	      <Anchors>
+		    <Anchor point="BOTTOM">
+			  <Offset>
+			    <AbsDimension x="-45" y="10"/>
+			  </Offset>
+		    </Anchor>
+	      </Anchors>
+	      <NormalTexture file="Interface\Glues\Common\Glue-LeftArrow-Button-Up"/>
+		  <PushedTexture file="Interface\Glues\Common\Glue-LeftArrow-Button-Down"/>
+		  <HighlightTexture file="Interface\Glues\Common\Glue-LeftArrow-Button-Highlight" alphaMode="ADD"/>
+	      <Scripts>
+		    <OnClick> AQNextPageL_OnClick(); </OnClick>
+		    <OnShow>
+	          this:SetFrameLevel( this:GetParent():GetFrameLevel() + 2 );
+	        </OnShow>
+	      </Scripts>
+        </Button>
      </Frames>
 		<Layers>
 			<Layer level="BACKGROUND">
@@ -460,7 +553,7 @@
 				</Texture>
 			</Layer>
 			<Layer level="OVERLAY">
-			  <FontString name="Questueberschrift" inherits="AQFontBIG">
+			  <FontString name="QuestName" inherits="SystemFont">
                 <Size>
                   <AbsDimension x="400" y="12"/>
                 </Size>
@@ -472,7 +565,7 @@
                    </Anchor>
                 </Anchors>
                </FontString>
-               <FontString name="QuestLeveltext" inherits="AQFont" justifyH = "LEFT" justifyV = "TOP">
+               <FontString name="QuestLeveltext" inherits="QuestFont" justifyH = "LEFT" justifyV = "TOP">
                 <Size>
                   <AbsDimension x="400" y="12"/>
                 </Size>
@@ -484,7 +577,7 @@
                    </Anchor>
                 </Anchors>
                </FontString>
-               <FontString name="QuestAttainLeveltext" inherits="AQFont" justifyH = "LEFT" justifyV="TOP">
+               <FontString name="QuestAttainLeveltext" inherits="QuestFont" justifyH = "LEFT" justifyV="TOP">
                 <Size>
                   <AbsDimension x="400" y="12"/>
                 </Size>
@@ -496,7 +589,7 @@
                    </Anchor>
                 </Anchors>
                </FontString>
-               <FontString name="Prequesttext" inherits="AQFont" maxLines="20" justifyH = "LEFT" justifyV = "TOP">
+               <FontString name="Prequesttext" inherits="QuestFont" maxLines="20" justifyH = "LEFT" justifyV = "TOP">
                 <Size>
                   <AbsDimension x="450" y="500"/>
                 </Size>
@@ -508,7 +601,7 @@
                    </Anchor>
                 </Anchors>
                </FontString>
-               <FontString name="StoryTEXT" inherits="AQFontBIG" justifyH = "LEFT" justifyV = "TOP">
+               <FontString name="StoryTEXT" inherits="SystemFont" justifyH = "LEFT" justifyV = "TOP">
                 <Size>
                   <AbsDimension x="410" y="450"/>
                 </Size>
@@ -520,7 +613,7 @@
                    </Anchor>
                 </Anchors>
                </FontString>
-               <FontString name="REWARDstext" inherits="AQFontBIG" justifyH = "LEFT" justifyV="TOP" >
+               <FontString name="REWARDstext" inherits="SystemFont" justifyH = "LEFT" justifyV="TOP" >
                 <Size>
                   <AbsDimension x="400" y="12"/>
                 </Size>
@@ -528,6 +621,30 @@
                    <Anchor point="BOTTOMLEFT">
                      <Offset>
                        <AbsDimension x="20" y="155"/>
+                     </Offset>
+                   </Anchor>
+                </Anchors>
+               </FontString>
+               <FontString name="AQFQ_TEXT" inherits="QuestFont" justifyH = "LEFT" justifyV="TOP" text="Quest finished:">
+                <Size>
+                  <AbsDimension x="150" y="12"/>
+                </Size>
+                <Anchors>
+                   <Anchor point="TOPRIGHT">
+                     <Offset>
+                       <AbsDimension x="-10" y="-50"/>
+                     </Offset>
+                   </Anchor>
+                </Anchors>
+               </FontString>
+               <FontString name="AQPageCount" inherits="SystemFont" justifyV="TOP">
+                <Size>
+                  <AbsDimension x="50" y="20"/>
+                </Size>
+                <Anchors>
+                   <Anchor point="BOTTOM">
+                     <Offset>
+                       <AbsDimension x="" y="18"/>
                      </Offset>
                    </Anchor>
                 </Anchors>
@@ -541,7 +658,7 @@
 		</Scripts>
 	</Frame>
 
----------------------------SHOW HIDE (PANEL) BUTTON
+<!--          SHOW HIDE (PANEL) BUTTON            -->
 
 	<Frame name="AtlasQuestButtonFrame" toplevel="true" enableMouse="true" parent="AtlasFrame" hidden="false">
 	  <Size>
@@ -552,14 +669,14 @@
  			</Anchor>
  		</Anchors>
 	  <Frames>
-	  <Button name="CLOSEbutton3" inherits="OptionsButtonTemplate" text="AQ">
+	  <Button name="CLOSEbutton3" inherits="OptionsButtonTemplate" text="AtlasQuest">
           <Size>
-            <AbsDimension x="25" y="25"/>
+            <AbsDimension x="90" y="20"/>
           </Size>
 	      <Anchors>
 		     <Anchor point="TOPRIGHT">
 			   <Offset>
-				  <AbsDimension x="-115" y="-47"/>
+				  <AbsDimension x="-120" y="-61"/>
 			   </Offset>
 		     </Anchor>
 	      </Anchors>
