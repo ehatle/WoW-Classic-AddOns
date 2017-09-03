@@ -1,2 +1,2 @@
 # WoW-Classic-AddOns
-Personal addon collection for WoW 1.12.1
+Personal addon collection for WoW 1.12
