@@ -41,3 +41,6 @@ luac.out
 
 # Mac
 .DS_Store
+
+# Blizzard
+Blizzard_*
