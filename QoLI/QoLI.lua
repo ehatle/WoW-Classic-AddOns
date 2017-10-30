@@ -40,22 +40,6 @@ function f:ADDON_LOADED(addon)
 
     tooltip = CreateFrame('GameTooltip', 'QoLITooltip', nil, 'GameTooltipTemplate')
     tooltip:SetOwner(UIParent, 'ANCHOR_NONE')
-
-    -- FEATURE: allow quick "looting" of mail attachments by holding down shift
-    post_hook(OpenMailFrame, 'Show', function(self)
-        if not IsShiftKeyDown() then
-            return
-        end
-
-        -- money and items only. nobody needs the letters.. right?
-        if OpenMailMoneyButton:IsVisible() then
-            OpenMailMoneyButton:Click()
-        end
-
-        if OpenMailPackageButton:IsVisible() then
-            OpenMailPackageButton:Click()
-        end
-    end)
 end
 
 -- FIX: QUEST_WATCH_LIST not being cleaned up when completing quests, leading to

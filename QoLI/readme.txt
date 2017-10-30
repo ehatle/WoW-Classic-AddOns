@@ -1,6 +1,5 @@
 Features:
 
-* Hold shift when opening mail with attachments to quickly grab them
 * Known recipes are grayed out in the Auction House
 
 Bug fixes:
